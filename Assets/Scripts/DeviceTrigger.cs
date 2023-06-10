@@ -5,8 +5,15 @@ using UnityEngine;
 public class DeviceTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject[] targets;
+    public bool requireKey;
     
     void OnTriggerEnter(Collider other) {
+        //Return if key is required but not equipped
+        if (requireKey && Managers.Inventory.equippedItem != "key") {
+            return;
+        }
+
+        //Active
         foreach (GameObject target in targets) {
             target.SendMessage("Active");
         }
