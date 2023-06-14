@@ -58,7 +58,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
             return true;
         }
 
-        //Unequip item if it is already equipped (equippedItem == name)
+        //Unequip if the item is already equipped (equippedItem == name)
         equippedItem = null;
         Debug.Log("Unequipped");
         return false;
