@@ -40,7 +40,7 @@ public class BasicUI : MonoBehaviour
             );
         }
 
-        //Equip items by clicking on buttons
+        //Equip items by clicking on button
         posX = 10;
         posY += height + buffer;
 
