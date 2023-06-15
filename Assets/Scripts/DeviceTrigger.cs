@@ -8,7 +8,7 @@ public class DeviceTrigger : MonoBehaviour
     public bool requireKey;
     
     void OnTriggerEnter(Collider other) {
-        //Return if key is required but not equipped
+        //Don't open if key is required but not equipped
         if (requireKey && Managers.Inventory.equippedItem != "key") {
             return;
         }
